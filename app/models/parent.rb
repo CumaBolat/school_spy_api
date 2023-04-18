@@ -1,4 +1,4 @@
-class Teacher < ApplicationRecord
+class Parent < ApplicationRecord
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i.freeze
 
   before_save { self.email = email.downcase }
@@ -15,7 +15,6 @@ class Teacher < ApplicationRecord
               format: {with: VALID_EMAIL_REGEX}
 
   has_secure_password
-
-  has_many :parents
-  belongs_to :school
+  
+  belongs_to :teacher
 end
