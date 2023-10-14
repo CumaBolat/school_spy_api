@@ -3,5 +3,9 @@ Rails.application.routes.draw do
 
   get '/teacher', to: 'teachers#show'
 
-  get '/teachers', to: 'teachers#show'
+  get '/teachers', to: 'teachers#index'
+
+  get '/schools_index', to: 'schools#index'
+
+  post '/parent_create', to: 'parents#create'
 end

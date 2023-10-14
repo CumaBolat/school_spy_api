@@ -16,18 +16,18 @@ class TeachersController < ApplicationController
     end
 
     def create
-        @teacher = Teacher.create!(
-            name: params[:name],
-            surname: params[:surname],
-            email: params[:email],
-            phone_number: params[:phone_number],
-            password_digest: params[:password_digest],
-            age: params[:age],
-            school_id: params[:school_id],
-            description: params[:description]
-        )
+      @teacher = Teacher.create!(
+        name: params[:name],
+        surname: params[:surname],
+        email: params[:email],
+        phone_number: params[:phone_number],
+        password_digest: params[:password_digest],
+        age: params[:age],
+        school_id: params[:school_id],
+        description: params[:description]
+      )
 
-        render json: @teacher        
+      render json: @teacher        
     end
 
     def update

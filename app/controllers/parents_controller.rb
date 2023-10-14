@@ -33,7 +33,11 @@ class ParentsController < ApplicationController
       is_only_child: params[:is_only_child]
     )
 
-    render json: @parent
+    if @parent.save
+      render json: @parent, status: 200
+    else
+      render json: { error: 'Invalid email or password' }, status: :unauthorized
+    end
   end
 
   def update

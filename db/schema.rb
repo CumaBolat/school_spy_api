@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_18_162655) do
+ActiveRecord::Schema.define(version: 2023_04_20_171831) do
 
   create_table "parents", force: :cascade do |t|
     t.string "name"
@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 2022_11_18_162655) do
     t.integer "child_school_id"
     t.integer "teacher_id"
     t.boolean "is_only_child"
+    t.string "school_name"
+    t.string "teacher_name"
   end
 
   create_table "schools", force: :cascade do |t|
