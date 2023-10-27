@@ -14,7 +14,7 @@ class SchoolsController < ApplicationController
   def create
     @school = School.create(
       name: params[:name],
-      address: params[:address],
+      address: params[:address]
     )
 
     render json: @school

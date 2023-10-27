@@ -15,6 +15,6 @@ class Parent < ApplicationRecord
               format: {with: VALID_EMAIL_REGEX}
 
   has_secure_password
-  
+
   belongs_to :teacher
 end
